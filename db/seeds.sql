@@ -1,0 +1,1 @@
+INSERT INTO burgers (name, bun, cheese, condiments, toppings, devoured) VALUES ("Station Burger", "Brioche Bun", "Cheddar", "Barbecue Sauce", "Bacon, Lettuce, Tomato, Pickles, Red Onion", FALSE);
