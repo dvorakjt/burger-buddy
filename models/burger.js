@@ -1,9 +1,9 @@
 const orm = require("../config/orm");
 
 const burger = {
-    create: (name, bun, cheese, condiments, toppings, devoured) => {
+    create: (name, adjective, bun, cheese, condiments, toppings, devoured) => {
         return new Promise(async (resolve, reject) => {
-            let res = await orm.createRecord("burgers", ["name", "bun", "cheese", "condiments", "toppings", "devoured"], [name, bun, cheese, condiments, toppings, devoured]);
+            let res = await orm.createRecord("burgers", ["name", "adjective", "bun", "cheese", "condiments", "toppings", "devoured"], [name, adjective, bun, cheese, condiments, toppings, devoured]);
             resolve(res);
         });
     },
@@ -13,9 +13,9 @@ const burger = {
             let res;
             //if a condition was supplied find the burger that satisfies that condition, if not just find all burgers
             if (condition_var && condition_val) {
-                let res = await orm.readRecord("burgers", [condition_var, condition_val]);
+                res = await orm.readRecord("burgers", [condition_var, condition_val]);
             }
-            else let res = await orm.readRecord("burgers");
+            else res = await orm.readRecord("burgers");
             resolve(res);
         });
     },

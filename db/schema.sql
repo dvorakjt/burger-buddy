@@ -6,6 +6,7 @@ USE burgers_db;
 CREATE TABLE burgers (
 id INT AUTO_INCREMENT NOT NULL,
 name VARCHAR(50),
+adjective VARCHAR(50),
 bun VARCHAR(50),
 cheese VARCHAR(50),
 condiments VARCHAR(100),
