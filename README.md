@@ -2,7 +2,7 @@
 ![Screenshot of burger-buddy by dvorakjt](public/assets/screenshots/screen-1.png)
 This is a full-stack web application which allows users to create, read, update and delete entries (representing burgers) into an online database. A link to the deployed version can be found [here.](https://aqueous-inlet-22369.herokuapp.com/)
 
-Background photo taken by David Ore on Unsplash.
+Background photo taken by Daniel Ore on Unsplash.
 
 ## Table of Contents
 
