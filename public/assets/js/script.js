@@ -1,4 +1,8 @@
 $(document).ready(() => {
+    $(".back").on("click", function (event) {
+        location.replace("/");
+    });
+
     $(".devour").on("click", function (event) {
         const id = $(this).attr("data-id");
 

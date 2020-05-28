@@ -1,5 +1,4 @@
-<div
-    style="background-image: url(https://images.unsplash.com/photo-1547754070-c73f90c116b5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60);">
+<div class="bg-img">
     <nav class="d-flex justify-content-center navbar navbar-light bg-light mb-2">
         <h1 style="text-align: center;">Burger Buddy</h1>
     </nav>
@@ -11,32 +10,32 @@
                     <div class="form-group">
                         <div class="form-group">
                             <label for="name">Name of Burger:</label>
-                            <input type="text" class="form-control" id="name" placeholder="Sample Burger">
+                            <input type="text" class="form-control" id="name" placeholder="Sample Burger" required>
                         </div>
                         <div class="form-group">
                             <label for="adjective">An adjective to describe the burger...</label>
-                            <input type="text" class="form-control" id="adjective" placeholder="Delicious">
+                            <input type="text" class="form-control" id="adjective" placeholder="Delicious" required>
                         </div>
                         <div class="form-group">
                             <label for="bun">What kind of bun?</label>
-                            <input type="text" class="form-control" id="bun" placeholder="Sesame Seed Bun">
+                            <input type="text" class="form-control" id="bun" placeholder="Sesame Seed Bun" required>
                         </div>
                         <div class="form-group">
                             <label for="cheese">Cheese Choice:</label>
-                            <input type="text" class="form-control" id="cheese" placeholder="Cheddar">
+                            <input type="text" class="form-control" id="cheese" placeholder="Cheddar" required>
                         </div>
                         <div class="form-group">
                             <label for="condiments">What condiments?</label>
-                            <input type="text" class="form-control" id="condiments" placeholder="Ketchup">
+                            <input type="text" class="form-control" id="condiments" placeholder="Ketchup" required>
                         </div>
                         <div class="form-group">
                             <label for="toppings">Toppings</label>
                             <input type="text" class="form-control" id="toppings"
-                                placeholder="Lettuce, Tomato, Onion, Pickles">
+                                placeholder="Lettuce, Tomato, Onion, Pickles" required>
                         </div>
                     </div>
                     <button type="submit" class="btn btn-primary" style="float: left;">Submit</button>
-                    {{!-- <a href="/"><button class="btn btn-danger" style="float: right;">Go Back</button></a> --}}
+                    <button class="btn btn-danger back" style="float: right;">Go Back</button>
                 </form>
             </div>
         </div>
