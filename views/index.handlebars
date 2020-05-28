@@ -1,8 +1,37 @@
-<h1>Burger Buddy</h1>
+<div
+    style="background-image: url(https://images.unsplash.com/photo-1547754070-c73f90c116b5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60);">
+    <nav class="d-flex justify-content-center navbar navbar-light bg-light mb-5">
+        <h1 style="text-align: center;">Burger Buddy</h1>
+    </nav>
 
-<ul>
-    {{#each burgers}}
-    <li>{{name}}</li>
-    <p>A {{adjective}} burger served on a {{bun}}, with {{cheese}} and {{condiments}}, topped with {{toppings}}.</p>
-    {{/each}}
-</ul>
+    <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-5">
+            <figure class="card mt-2 p-3">
+                <h3>Burgers to Eat</h3>
+                {{#each burgers}}
+                <hr>
+                <h6>{{name}}</h6>
+                <p>A {{adjective}} burger served on a {{bun}}, with {{cheese}} and {{condiments}}, topped with
+                    {{toppings}}.
+                </p>
+                <button class="btn btn-danger">Devour!</button>
+                {{/each}}
+            </figure>
+        </div>
+        <div class="col-md-5">
+            <figure class="card mt-2 p-3">
+                <h3>Burgers Eaten</h3>
+                {{#each burgers}}
+                <hr>
+                <h6>{{name}}</h6>
+                <p>A {{adjective}} burger served on a {{bun}}, with {{cheese}} and {{condiments}}, topped with
+                    {{toppings}}.
+                </p>
+                <button class="btn btn-danger">Devour!</button>
+                {{/each}}
+            </figure>
+        </div>
+        <div class="col-md-1"></div>
+    </div>
+</div>
