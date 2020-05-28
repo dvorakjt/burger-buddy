@@ -8,21 +8,25 @@ router.get("/", async (req, res) => {
     const hbsData = {
         burgers: data
     };
-    console.log(hbsData);
     res.render("index", hbsData);
+});
+
+router.get("/add", (req, res) => {
+    res.render("add");
 });
 
 router.post("/api/burgers", async (req, res) => {
     //use object deconstruction to get variables
     const [{ name }, { adjective }, { bun }, { cheese }, { condiments }, { toppings }, { devoured }] = Array(8).fill(req.body);
     const newBurg = await burger.create(name, adjective, bun, cheese, condiments, toppings);
-    res.redirect("/");
+    res.send(200);
 });
 
 router.put("/api/burgers", async (req, res) => {
-    const [{ name }, { adjective }, { bun }, { cheese }, { condiments }, { toppings }, { devoured }, { id }] = Array(9).fill(req.body);
-    const updatedBurg = await burger.update(["name", "adjective", "bun", "cheese", "condiments", "toppings", "devoured"], [name, adjective, bun, cheese, condiments, toppings, devoured], ["id", id]);
-    res.redirect("/");
+    const [{ devoured }, { id }] = Array(2).fill(req.body);
+    console.log(devoured, id);
+    const updatedBurg = await burger.update(["devoured"], [devoured], "id", id);
+    res.send(200);
 });
 
 router.delete("api/burgers/:id", async (req, res) => {

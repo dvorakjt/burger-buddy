@@ -22,6 +22,7 @@ const burger = {
 
     update: (columns, values, condition_var, condition_val) => {
         return new Promise(async (resolve, reject) => {
+            console.log(columns, values, condition_var, condition_val);
             let res = await orm.updateRecord("burgers", columns, values, [condition_var, condition_val]);
             resolve(res);
         });

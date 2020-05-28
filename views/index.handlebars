@@ -8,14 +8,31 @@
         <div class="col-md-1"></div>
         <div class="col-md-5">
             <figure class="card mt-2 p-3">
-                <h3>Burgers to Eat</h3>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <h3>Burgers to Eat</h3>
+                    </div>
+                    <div class="col-sm-6 d-flex justify-content-end">
+                        <a href="/add"><button class="btn btn-primary">Add burger</button></a>
+                    </div>
+                </div>
                 {{#each burgers}}
+                {{#unless devoured}}
                 <hr>
-                <h6>{{name}}</h6>
+                <div class="row">
+                    <div class="col-8">
+                        <h6>{{name}}</h6>
+                    </div>
+                    <div class="col-4 d-flex justify-content-end">
+                        <button class="btn btn-danger p-0 delete" style="width: 25px; height: 25px;" data-id={{id}}><i
+                                class="fas fa-times"></i></button>
+                    </div>
+                </div>
                 <p>A {{adjective}} burger served on a {{bun}}, with {{cheese}} and {{condiments}}, topped with
                     {{toppings}}.
                 </p>
-                <button class="btn btn-danger">Devour!</button>
+                <button class="btn btn-danger devour" style="width:100px" data-id={{id}}>Devour!</button>
+                {{/unless}}
                 {{/each}}
             </figure>
         </div>
@@ -23,12 +40,22 @@
             <figure class="card mt-2 p-3">
                 <h3>Burgers Eaten</h3>
                 {{#each burgers}}
+                {{#if devoured}}
                 <hr>
-                <h6>{{name}}</h6>
+                <div class="row">
+                    <div class="col-8">
+                        <h6>{{name}}</h6>
+                    </div>
+                    <div class="col-4 d-flex justify-content-end">
+                        <button class="btn btn-danger p-0 delete" style="width: 25px; height: 25px;" data-id={{id}}><i
+                                class="fas fa-times"></i></button>
+                    </div>
+                </div>
                 <p>A {{adjective}} burger served on a {{bun}}, with {{cheese}} and {{condiments}}, topped with
                     {{toppings}}.
                 </p>
-                <button class="btn btn-danger">Devour!</button>
+                {{!-- <button class="btn btn-danger">Devour!</button> --}}
+                {{/if}}
                 {{/each}}
             </figure>
         </div>
