@@ -4,6 +4,7 @@
   "description": "This repository contains code for a full-stack application which will use MySql, Express JS, Handlebars, Javascript, CSS and HTML to record and display burgers that the user would like to try, as well as burgers that they have already tried.",
   "main": "index.js",
   "scripts": {
+    "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

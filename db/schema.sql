@@ -1,7 +1,7 @@
 DROP DATABASE burgers_db;
 CREATE DATABASE burgers_db;
 
-USE burgers_db;
+USE y46i20vj5rvr19mg;
 
 CREATE TABLE burgers (
 id INT AUTO_INCREMENT NOT NULL,
@@ -12,6 +12,7 @@ cheese VARCHAR(50),
 condiments VARCHAR(100),
 toppings VARCHAR(100),
 devoured BOOLEAN,
+createdAt TIMESTAMP NOT NULL,
 PRIMARY KEY(id)
 );
 
