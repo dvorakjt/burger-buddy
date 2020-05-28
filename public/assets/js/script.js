@@ -11,8 +11,44 @@ $(document).ready(() => {
         }).then(
             function () {
                 console.log("ate the burg");
-                // Reload the page to get the updated list
+                // Refresh the page to display changes
                 location.reload();
+            }
+        );
+    });
+
+    $(".delete").on("click", function (event) {
+        console.log("yo");
+        const id = $(this).attr("data-id");
+        console.log(id);
+        $.ajax(`/api/burgers/${id}`, {
+            type: "DELETE"
+        }).then(
+            function () {
+                location.reload();
+                // Refresh the page to display changes
+            }
+        );
+    });
+
+    $("#newBurgerForm").on("submit", function (event) {
+        console.log("hello");
+        const newBurg = {
+            name: $("#name").val().trim(),
+            adjective: $("#adjective").val().trim(),
+            bun: $("#bun").val().trim(),
+            cheese: $("#cheese").val().trim(),
+            condiments: $("#condiments").val().trim(),
+            toppings: $("#toppings").val().trim(),
+            devoured: false
+        }
+        // send the post request
+        $.ajax("/api/burgers", {
+            type: "POST",
+            data: newBurg
+        }).then(
+            function () {
+                location.replace("/");
             }
         );
     });

@@ -29,7 +29,7 @@ const burger = {
     },
 
     delete: (id) => {
-        return new Promis(async (resolve, reject) => {
+        return new Promise(async (resolve, reject) => {
             let res = await orm.deleteRecord("burgers", ["id", id]);
             resolve(res);
         });
